@@ -2,39 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* DevVault Design System - Modern dark theme with vibrant gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 20% 98%;
+    --primary-glow: 270 100% 80%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 217 10% 64%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 263 70% 50%;
+    --accent-foreground: 210 20% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 263 70% 50%;
+
+    /* Custom DevVault colors */
+    --vault-purple: 263 70% 50%;
+    --vault-blue: 217 91% 60%;
+    --vault-cyan: 189 85% 65%;
+    --vault-pink: 316 73% 69%;
+    --vault-green: 142 69% 58%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--vault-purple)), hsl(var(--vault-blue)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--vault-blue)), hsl(var(--vault-cyan)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--vault-pink)), hsl(var(--vault-purple)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--vault-purple) / 0.1), hsl(var(--vault-blue) / 0.1));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 50px hsl(var(--vault-purple) / 0.3);
+    --shadow-card: 0 8px 32px hsl(224 71% 4% / 0.4);
+    --shadow-elevated: 0 20px 40px hsl(224 71% 4% / 0.6);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
